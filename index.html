@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DJZ List | Privacy Policy</title>
+  <title>Zepfrontera | Privacy Policy</title>
   <style>
     body { font-family: Arial, sans-serif; background: #f6f7fb; color: #252525; line-height: 1.65; margin: 0; padding: 28px 16px; }
     main { max-width: 800px; margin: auto; background: white; padding: 35px; border-radius: 12px; }
@@ -14,23 +14,34 @@
 </head>
 <body>
 <main>
-  <h1>DJZ List Privacy Policy</h1>
-  <p class="date">Last updated: October 14, 2026</p>
-  <p>DJZ List is a local listing-preparation application used by DJZ Finds. This policy describes the application's current data handling, including optional eBay seller authorization.</p>
+  <h1>Zepfrontera Privacy Policy</h1>
+  <p class="date">Last updated: October 15, 2026</p>
+  <p>Zepfrontera is a locally run resale listing-preparation application operated by DJZ Finds. This policy explains how the current application handles information and how eBay seller authorization will be used when that connection is enabled.</p>
+
   <h2>Information Used</h2>
-  <p>Draft listings, SKUs, seller notes, photographs, corrections, and revision history are stored on the operator's Windows computer. With seller consent, DJZ List uses eBay Production authorization to retrieve existing seller business policies and account information permitted by eBay. It does not currently publish listings or create, modify, or delete eBay policies.</p>
-  <h2>Authorization and Storage</h2>
-  <p>The seller signs in directly through eBay. DJZ List does not collect the seller's eBay password. Access and refresh tokens are stored locally using Windows DPAPI encryption. Authorization codes and tokens are not intended to appear in public exports or application logs. Retrieved policy details may be cached locally.</p>
-  <h2>Service Providers</h2>
-  <p>eBay processes authorization and API requests. When the operator requests Gemini photograph analysis, selected product photographs, internal information-board photographs, and relevant listing inputs are submitted to the configured Google Gemini service. eBay OAuth tokens are not included in those analysis requests.</p>
-  <p>Cloudflare hosts a separate eBay account-deletion notification receiver. This privacy-policy page is hosted through GitHub Pages.</p>
+  <p>Zepfrontera stores draft listings, internal listing numbers, inventory location SKUs (when provided), seller notes, photographs, edits, and listing statuses on the operator's computer. An information-card photograph may contain seller-provided item details. Employees review and correct AI suggestions before relying on them.</p>
+
+  <h2>AI Service Providers</h2>
+  <p>When AI identification is requested or automatically initiated by the operator's listing workflow, selected item photographs and, when designated, a private information-card photograph are transmitted to the AI provider chosen in the application. Supported providers currently include Google Gemini and a DJZ Finds Cloudflare Worker using Cloudflare Workers AI. The selected images and applicable listing information are processed to suggest listing details. Private information-card photographs are not intended for publication as eBay product photographs. AI-generated results may be incomplete or incorrect and require human review.</p>
+
+  <h2>eBay Authorization and Use</h2>
+  <p>Zepfrontera is preparing to connect to eBay through eBay's official authorization process. The seller will sign in directly with eBay; Zepfrontera does not request or store the seller's eBay password. Once enabled and authorized, the application may use the permissions granted by the seller to retrieve account information, categories, item specifics, selling policies, and listing data, and to submit or manage listings where the seller explicitly directs it to do so. As of this update, eBay seller OAuth and publishing are not active in Zepfrontera.</p>
+
+  <h2>Local Credentials and Security</h2>
+  <p>AI connection credentials are saved in a local application configuration file on the operator's computer. This file is not currently encrypted by Zepfrontera. Access to the computer and its local files should therefore be restricted. eBay OAuth token storage will be documented when the authorization integration is implemented. Zepfrontera does not intentionally include API secrets or OAuth tokens in publicly shared listing exports.</p>
+
   <h2>Retention and Deletion</h2>
-  <p>Local listing data and history remain until removed by the operator. Backups may retain previous copies. Disconnecting the eBay seller account removes locally stored authorization information through the application's disconnect process; revocation of authorization with eBay may require action in eBay account settings.</p>
-  <p>The Cloudflare notification receiver records eBay account-deletion notifications. Received events may be queued pending processing. Automatic deletion across all local data and backups has not yet been verified. Receipt of a notification must not be interpreted as confirmation that deletion has been completed.</p>
+  <p>Drafts and items set aside for review remain locally until the operator removes them. Deleting a draft removes its local record and associated photos. Published-listing working copies are designed to be retained for approximately seven days and then cleared from the local editable workspace; this does not remove the live eBay listing. App backups or copied data folders may retain earlier information and require separate removal.</p>
+  <p>Disconnecting a future eBay authorization will need to remove its locally stored access credentials. Access may also be revoked through eBay. The application does not currently claim verified automatic removal of all historical local data and backups following an eBay account-deletion notification.</p>
+
+  <h2>Other Hosting</h2>
+  <p>This privacy-policy webpage is hosted on GitHub Pages. DJZ Finds also maintains a separate Cloudflare service for eBay account-deletion notifications. These services have their own infrastructure and data-handling practices.</p>
+
   <h2>Contact and Questions</h2>
-  <p>DJZ Finds operates DJZ List. For questions about this application or requests concerning stored information, contact DJZ Finds through eBay's seller-contact features.</p>
+  <p>For questions about Zepfrontera or its stored information, contact DJZ Finds through eBay's seller-contact features.</p>
+
   <h2>Changes</h2>
-  <p>This policy will be updated as DJZ List's features and data-handling practices change.</p>
+  <p>This policy will be updated as Zepfrontera's authorization, publishing, and data-handling capabilities change.</p>
 </main>
 </body>
 </html>
